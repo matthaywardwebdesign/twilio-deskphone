@@ -1,0 +1,148 @@
+@import '../../styles/colors.scss';
+.app {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 8px;
+    background: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+
+.call-list {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  background: #FFF;
+  box-shadow: 0 0 30px -8px #000;
+
+  .loading {
+    text-align: center;
+    margin-top: 60%;
+  }
+}
+
+.home {
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+  min-width: 300px;
+
+  .material-icons {
+    margin-top: 40px;
+    background: $primary-color;
+    padding: 20px;
+    font-size: 3em;
+    color: #FFF;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .buttons {
+    i {
+      cursor: pointer;
+    }
+
+    .decline {
+      background: $error;
+      transition: 300ms ease background;
+
+      &:hover {
+        background: $error-dark;
+      }
+    }
+
+    .accept {
+      background: $success;
+      transition: 300ms ease background;
+
+      &:hover {
+        background: $success-dark;
+      }
+    }
+
+    .make {
+      transition: 300ms ease background;
+
+      &:hover {
+        background: $primary-color-dark;
+      }
+    }
+  }
+
+  .dialer, .settings-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+
+    input {
+      font-size: 1.4em;
+      border: 2px solid $primary-color-dark;
+      padding: 10px;
+      outline: 0;
+    }
+
+    .button {
+      cursor: pointer;
+      background: $primary-color;
+      width:100%;
+      padding: 15px;
+      color: #FFF;
+      transition: 300ms ease background;
+
+      &:hover {
+        background: $primary-color-dark;
+      }
+
+      &.dial {
+        margin-top: 20px;
+      }
+
+      &.back {
+        background: #DBDBDB;
+        margin-bottom: 10px;
+
+        &:hover {
+          background: #222222;
+        }
+      }
+    }
+  }
+}
+
+.settings {
+  position: absolute;
+  top: 10px;
+  left:10px;
+
+  .material-icons {
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: #222;
+    font-size: 1.2em;
+    transition: 300ms ease color;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
